@@ -8,21 +8,21 @@ public class FizzBuzz {
         if (digital.is3Or5Or7Multiples(target)) {
             if (digital.isContains7(target)) {
                 if (digital.isContains3(target)) {
-                    if (digital.is3Multiples(target)) result.append("Fizz");
+                    getResult(result, digital.is3Multiples(target), "Fizz");
                 } else {
-                    if (digital.is3Multiples(target)) result.append("Fizz");
-                    if (digital.is7Multiples(target)) result.append("Whizz");
+                    getResult(result, digital.is3Multiples(target), "Fizz");
+                    getResult(result, digital.is7Multiples(target), "Whizz");
                 }
             } else {
                 if (digital.isContains5(target)) {
-                    if (digital.is5Multiples(target)) result.append("Buzz");
-                    if (digital.is7Multiples(target)) result.append("Whizz");
+                    getResult(result, digital.is5Multiples(target), "Buzz");
+                    getResult(result, digital.is7Multiples(target), "Whizz");
                 } else if (digital.isContains3(target)) {
-                    if (digital.is3Multiples(target)) result.append("Fizz");
+                    getResult(result, digital.is3Multiples(target), "Fizz");
                 } else {
-                    if (digital.is3Multiples(target)) result.append("Fizz");
-                    if (digital.is5Multiples(target)) result.append("Buzz");
-                    if (digital.is7Multiples(target)) result.append("Whizz");
+                    getResult(result, digital.is3Multiples(target), "Fizz");
+                    getResult(result, digital.is5Multiples(target), "Buzz");
+                    getResult(result, digital.is7Multiples(target), "Whizz");
                 }
             }
         } else {
@@ -33,5 +33,9 @@ public class FizzBuzz {
             }
         }
         return result.toString();
+    }
+
+    private void getResult(StringBuilder result, boolean isAppend, String appendString) {
+        if (isAppend) result.append(appendString);
     }
 }
