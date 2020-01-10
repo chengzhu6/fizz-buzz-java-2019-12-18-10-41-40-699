@@ -1,21 +1,14 @@
 package com.thoughtworks.version02;
 
 public class FizzBuzz {
-
-
-    public String fizzBuzz(int target) {
-
-        return Strategy.getResult(target);
+    boolean isFizz;
+    boolean isBuzz;
+    boolean isWhizz;
+    enum Result {
+        Fizz, Buzz, Whizz
     }
 
-}
-
-class Strategy {
-    static boolean isFizz;
-    static boolean isBuzz;
-    static boolean isWhizz;
-
-    public static String getResult(int target) {
+    public String fizzBuzz(int target) {
         isFizz = target % 3 == 0;
         isBuzz = target % 5 == 0;
         isWhizz = target % 7 == 0;
@@ -29,18 +22,14 @@ class Strategy {
         }
         if (!contains7 && contains5) isFizz = false;
         if (contains7) isBuzz = false;
-        return isBuzz || isFizz || isWhizz ? getResult(): Integer.toString(target);
+        return (isBuzz || isFizz || isWhizz) ? resultToString(): Integer.toString(target);
     }
 
-    private static String getResult() {
+    private String resultToString() {
         StringBuilder result = new StringBuilder();
         if (isFizz) result.append(Result.Fizz.name());
         if (isBuzz) result.append(Result.Buzz.name());
         if (isWhizz) result.append(Result.Whizz.name());
         return result.toString();
     }
-}
-
-enum Result {
-    Fizz, Buzz, Whizz
 }
