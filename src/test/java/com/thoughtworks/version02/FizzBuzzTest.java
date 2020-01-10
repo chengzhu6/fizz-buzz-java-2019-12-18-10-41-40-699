@@ -33,4 +33,10 @@ public class FizzBuzzTest {
         String excepted = "Fizz";
         assertEquals(excepted, actual);
     }
+    @Test
+    public void just_get_fizz_when_digital_contains_3() {
+        String actual = fizzBuzz.fizzBuzz(35);
+        String excepted = "Fizz";
+        assertEquals(excepted, actual);
+    }
 }

@@ -20,7 +20,11 @@ class Strategy {
         isBuzz = target % 5 == 0;
         isWhizz = target % 7 == 0;
         boolean contains3 = Integer.toString(target).contains("3");
-        if (contains3) isFizz = true;
+        if (contains3) {
+            isFizz = true;
+            isBuzz = false;
+            isWhizz = false;
+        }
         return isBuzz || isFizz || isWhizz ? getResult(): Integer.toString(target);
     }
 
