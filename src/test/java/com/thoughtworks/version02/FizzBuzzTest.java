@@ -22,8 +22,8 @@ public class FizzBuzzTest {
 
     @Test
     public void should_get_combination_when_digital_is_common_multiples_of_3_or_5_7() {
-        String actual = fizzBuzz.fizzBuzz(15);
-        String excepted = "FizzBuzz";
+        String actual = fizzBuzz.fizzBuzz(21);
+        String excepted = "FizzWhizz";
         assertEquals(excepted, actual);
     }
 
@@ -35,8 +35,15 @@ public class FizzBuzzTest {
     }
     @Test
     public void just_get_fizz_when_digital_contains_3() {
-        String actual = fizzBuzz.fizzBuzz(35);
+        String actual = fizzBuzz.fizzBuzz(30);
         String excepted = "Fizz";
+        assertEquals(excepted, actual);
+    }
+
+    @Test
+    public void not_get_fizz_when_digital_contains_5() {
+        String actual = fizzBuzz.fizzBuzz(35);
+        String excepted = "BuzzWhizz";
         assertEquals(excepted, actual);
     }
 }
