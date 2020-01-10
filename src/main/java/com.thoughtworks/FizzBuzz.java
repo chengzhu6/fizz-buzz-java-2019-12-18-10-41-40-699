@@ -8,6 +8,8 @@ public class FizzBuzz {
             return "Fizz";
         } else if (digital.is5Multiples(target)) {
             return "Buzz";
+        } else if (digital.is7Multiples(target)) {
+            return "Whizz";
         }
         return Integer.toString(target);
     }

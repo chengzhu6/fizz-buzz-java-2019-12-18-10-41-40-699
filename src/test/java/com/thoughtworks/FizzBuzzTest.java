@@ -27,4 +27,13 @@ public class FizzBuzzTest {
         String excepted = "Buzz";
         assertEquals(excepted, actual);
     }
+
+    @Test
+    public void should_return_whizz_when_digital_is_multiples_of_7() {
+        String actual = fizzBuzz.game(7);
+        String excepted = "Whizz";
+        assertEquals(excepted, actual);
+    }
+
+
 }
