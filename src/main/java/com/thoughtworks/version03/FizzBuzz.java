@@ -6,12 +6,12 @@ public class FizzBuzz {
     private boolean isBuzz;
     private boolean isWhizz;
 
-    public String fizzBuzz(int target) {
-        isFizz = isFizz(target);
-        isBuzz = isBuzz(target);
-        isWhizz = isWhizz(target);
+    public String fizzBuzz(int digital) {
+        isFizz = isFizz(digital);
+        isBuzz = isBuzz(digital);
+        isWhizz = isWhizz(digital);
 
-        return (isFizz || isBuzz || isWhizz) ? resultToString() : Integer.toString(target);
+        return (isFizz || isBuzz || isWhizz) ? resultToString() : Integer.toString(digital);
     }
 
     private String resultToString() {
@@ -22,16 +22,21 @@ public class FizzBuzz {
         return result.toString();
     }
 
-    private boolean isFizz(int target) {
-        return target % 3 == 0 || Integer.toString(target).contains("3");
+    private boolean isFizz(int digital) {
+        return digital % 3 == 0 || isContains(digital, 3);
     }
 
-    private boolean isBuzz(int target) {
-        return target % 5 == 0;
+    private boolean isBuzz(int digital) {
+        return digital % 5 == 0 && !isContains(digital, 3);
     }
 
-    private boolean isWhizz(int target) {
-        return target % 7 == 0;
+    private boolean isWhizz(int digital) {
+        return digital % 7 == 0 && !isContains(digital, 3);
     }
+
+    private boolean isContains(int digital, int target) {
+        return Integer.toString(digital).contains(Integer.toString(target));
+    }
+
 
 }
