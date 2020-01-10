@@ -23,7 +23,7 @@ public class FizzBuzz {
     }
 
     private boolean isFizz(int target) {
-        return target % 3 == 0;
+        return target % 3 == 0 || Integer.toString(target).contains("3");
     }
 
     private boolean isBuzz(int target) {
