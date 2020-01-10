@@ -24,4 +24,8 @@ public class Digital {
     public boolean isContains5(int target) {
         return Integer.toString(target).contains("5");
     }
+
+    public boolean isContains7(int target) {
+        return Integer.toString(target).contains("7");
+    }
 }
