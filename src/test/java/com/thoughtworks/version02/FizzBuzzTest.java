@@ -26,4 +26,11 @@ public class FizzBuzzTest {
         String excepted = "FizzBuzz";
         assertEquals(excepted, actual);
     }
+
+    @Test
+    public void get_fizz_when_digital_contains_3() {
+        String actual = fizzBuzz.fizzBuzz(13);
+        String excepted = "Fizz";
+        assertEquals(excepted, actual);
+    }
 }
