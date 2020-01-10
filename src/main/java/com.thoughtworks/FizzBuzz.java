@@ -16,7 +16,11 @@ public class FizzBuzz {
                 result.append("Whizz");
             }
         } else {
-            result.append(target);
+            if (digital.isContains3(target)) {
+                result.append("Fizz");
+            } else {
+                result.append(target);
+            }
         }
         return result.toString();
     }

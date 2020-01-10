@@ -16,4 +16,9 @@ public class Digital {
     public boolean is3Or5Or7Multiples(int target) {
         return is3Multiples(target) || is5Multiples(target) || is7Multiples(target);
     }
+
+    public boolean isContains3(int target) {
+        String parser = Integer.toString(target);
+        return parser.contains("3");
+    }
 }
