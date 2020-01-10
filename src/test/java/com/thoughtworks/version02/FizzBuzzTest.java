@@ -19,4 +19,11 @@ public class FizzBuzzTest {
         String excepted = "Fizz";
         assertEquals(excepted, actual);
     }
+
+    @Test
+    public void should_get_combination_when_digital_is_common_multiples_of_3_or_5_7() {
+        String actual = fizzBuzz.fizzBuzz(15);
+        String excepted = "FizzBuzz";
+        assertEquals(excepted, actual);
+    }
 }
