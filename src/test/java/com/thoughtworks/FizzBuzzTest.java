@@ -20,4 +20,11 @@ public class FizzBuzzTest {
         String excepted = "Fizz";
         assertEquals(excepted, actual);
     }
+
+    @Test
+    public void should_return_buzz_when_digital_is_multiples_of_5() {
+        String actual = fizzBuzz.game(5);
+        String excepted = "Buzz";
+        assertEquals(excepted, actual);
+    }
 }
