@@ -21,12 +21,14 @@ class Strategy {
         isWhizz = target % 7 == 0;
         boolean contains3 = Integer.toString(target).contains("3");
         boolean contains5 = Integer.toString(target).contains("5");
+        boolean contains7 = Integer.toString(target).contains("7");
         if (!contains5 && contains3) {
             isFizz = true;
             isBuzz = false;
             isWhizz = false;
         }
-        if (contains5) isFizz = false;
+        if (!contains7 && contains5) isFizz = false;
+        if (contains7) isBuzz = false;
         return isBuzz || isFizz || isWhizz ? getResult(): Integer.toString(target);
     }
 
