@@ -18,7 +18,10 @@ public class Digital {
     }
 
     public boolean isContains3(int target) {
-        String parser = Integer.toString(target);
-        return parser.contains("3");
+        return Integer.toString(target).contains("3");
+    }
+
+    public boolean isContains5(int target) {
+        return Integer.toString(target).contains("5");
     }
 }

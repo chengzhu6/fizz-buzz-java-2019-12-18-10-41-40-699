@@ -43,4 +43,10 @@ public class DigitalTest {
         boolean actual = digital.isContains3(13);
         assertTrue(actual);
     }
+
+    @Test
+    public void should_return_true_when_digital_contains_5() {
+        boolean actual = digital.isContains5(5);
+        assertTrue(actual);
+    }
 }
