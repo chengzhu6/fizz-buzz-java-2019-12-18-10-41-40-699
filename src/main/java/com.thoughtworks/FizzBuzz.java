@@ -15,6 +15,10 @@ public class FizzBuzz {
             if (digital.is7Multiples(target)) {
                 result.append("Whizz");
             }
+            if (digital.isContains3(target)) {
+                result = new StringBuffer(result.toString().replace("Buzz", ""));
+                result = new StringBuffer(result.toString().replace("Whizz", ""));
+            }
         } else {
             if (digital.isContains3(target)) {
                 result.append("Fizz");

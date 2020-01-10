@@ -48,4 +48,11 @@ public class FizzBuzzTest {
         String excepted = "Fizz";
         assertEquals(excepted, actual);
     }
+
+    @Test
+    public void should_only_return_fizz_when_digital_contains_3() {
+        String actual = fizzBuzz.game(30);
+        String excepted = "Fizz";
+        assertEquals(excepted, actual);
+    }
 }
