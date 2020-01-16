@@ -6,13 +6,20 @@ public class FizzBuzz {
         boolean isBuzz = digital % 5 == 0;
         boolean isWhizz = digital % 7 == 0;
         boolean contains3 = digital.toString().contains("3");
-        if (contains3) {
+        boolean contains5 = digital.toString().contains("5");
+        boolean contains7 = digital.toString().contains("7");
+        if (contains3 && !contains5) {
             isFizz = true;
             isBuzz = false;
             isWhizz = false;
         }
-
-        return isFizz ? resultToString(isFizz, isBuzz, isWhizz) : digital.toString();
+        if (contains5 && !contains7) {
+            isFizz = false;
+        }
+        if (contains7) {
+            isBuzz = false;
+        }
+        return isFizz || isFizz || isWhizz ? resultToString(isFizz, isBuzz, isWhizz) : digital.toString();
     }
 
     private String resultToString(boolean isFizz, boolean isBuzz, boolean isWhizz) {
