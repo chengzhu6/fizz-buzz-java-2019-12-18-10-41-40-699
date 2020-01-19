@@ -1,16 +1,13 @@
 package com.thoughtworks.version06;
 
-public class Contains3Rule implements Rule{
+public class Contains7Rule implements Rule{
     private Rule nextRule;
 
     @Override
     public void strategy(Result result, Integer digital) {
-        boolean contains3 = digital.toString().contains("3");
-        boolean contains5 = digital.toString().contains("5");
-        if (contains3 && !contains5) {
-            result.setFizz(true);
+        boolean contains7 = digital.toString().contains("7");
+        if (contains7) {
             result.setBuzz(false);
-            result.setWhizz(false);
         }
         if (nextRule != null) {
             nextRule.strategy(result, digital);
