@@ -1,24 +1,18 @@
 package com.thoughtworks.version06;
 
-public class Contains3Rule implements Rule{
-    private Rule nextRule;
+public class Contains3Rule extends Rule{
 
     @Override
-    public void strategy(Result result, Integer digital) {
-        boolean contains3 = digital.toString().contains("3");
-        boolean contains5 = digital.toString().contains("5");
-        if (contains3 && !contains5) {
+    public void rule(Result result, Integer digital) {
             result.setFizz(true);
             result.setBuzz(false);
             result.setWhizz(false);
-        }
-        if (nextRule != null) {
-            nextRule.strategy(result, digital);
-        }
     }
 
     @Override
-    public Rule appendNextRule(Rule nextRule) {
-        return this.nextRule = nextRule;
+    public boolean ruleIsWork(Integer digital) {
+        boolean contains3 = digital.toString().contains("3");
+        boolean contains5 = digital.toString().contains("5");
+        return contains3 && !contains5;
     }
 }
